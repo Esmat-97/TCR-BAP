@@ -1,4 +1,4 @@
-# 🧬 TCR-SpecProfile
+# 🧬 TCR-BAP
 
 **Baseline-Aware Analysis of Antigen-Specific TCR Repertoires**
 
