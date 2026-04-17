@@ -8,7 +8,7 @@
 
 Understanding T-cell receptor (TCR) specificity requires more than identifying frequent patterns — it demands distinguishing true biological signals from baseline repertoire biases.
 
-**TCR-SpecProfile** provides a framework for analyzing antigen-specific TCR repertoires (e.g., CMV) by comparing them against baseline (healthy) repertoires to uncover **true enrichment signals**.
+**TCR-BAP** provides a framework for analyzing antigen-specific TCR repertoires (e.g., CMV) by comparing them against baseline (healthy) repertoires to uncover **true enrichment signals**.
 
 ---
 
