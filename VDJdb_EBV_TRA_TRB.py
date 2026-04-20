@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # 1️⃣ قراءة الملف (CSV أو Excel)
-df = pd.read_csv("VDJdb_CMV_TRA_TRB_Input.csv" , sep="\t")
+df = pd.read_csv("VDJdb_EBV_TRA_TRB_Input.csv" , sep="\t")
 
 print(df.head())
 print(df.columns) # غيّر الاسم حسب الملف اللي عندك
@@ -20,9 +20,9 @@ v_usage = df["TRBV"].value_counts().head(10)
 plt.figure(figsize=(10,5))
 sns.barplot(x=v_usage.index, y=v_usage.values, color="blue")
 plt.xticks(rotation=90)
-plt.title("TRBV Gene Usage in CMV-specific TCRs")
+plt.title("TRBV Gene Usage in EBV-specific TCRs")
 plt.ylabel("Count")
-plt.savefig("CMV image/TRBV Gene Usage in CMV-specific TCRs.png")
+plt.savefig("EBV image/TRBV Gene Usage in EBV-specific TCRs.png")
 plt.show()
 
 
@@ -37,8 +37,8 @@ cdr3_lengths = df["CDR3b"].str.len()
 plt.hist(cdr3_lengths, bins=20, color="green", alpha=0.7)
 plt.xlabel("CDR3 Length")
 plt.ylabel("Frequency")
-plt.title("CDR3 Length Distribution (CMV)")
-plt.savefig("CMV image/CDR3 Length Distribution (CMV).png")
+plt.title("CDR3 Length Distribution (EBV)")
+plt.savefig("EBV image/CDR3 Length Distribution (EBV).png")
 plt.show()
 
 # 4️⃣ موتيفات بسيطة (بداية CASS ونهايات E/Q/Y)
@@ -76,7 +76,7 @@ plt.figure(figsize=(6,4))
 sns.barplot(x="Motif", y="Percentage", data=motif_summary, palette="Set2")
 plt.title("Motif Distribution (CASS endings)")
 plt.ylabel("Percentage (%)")
-plt.savefig("CMV image/Motif Distribution (CASS endings)in CMV-specific TCRs.png")
+plt.savefig("EBV image/Motif Distribution (CASS endings)in EBV-specific TCRs.png")
 plt.show()
 
 
@@ -99,7 +99,7 @@ sns.heatmap(pivot_table, cmap="YlGnBu", linewidths=0.5)
 plt.title("Heatmap of TRBV vs CDR3b Length")
 plt.xlabel("CDR3b Length")
 plt.ylabel("TRBV Gene")
-plt.savefig("CMV image/Heatmap of TRBV vs CDR3b Length in CMV-specific TCRs.png")
+plt.savefig("EBV image/Heatmap of TRBV vs CDR3b Length in EBV-specific TCRs.png")
 plt.show()
 
 
@@ -114,7 +114,7 @@ plt.xticks(rotation=45)
 plt.title("CDR3b Length Distribution by TRBV Gene")
 plt.ylabel("CDR3b Length")
 plt.xlabel("TRBV Gene")
-plt.savefig("CMV image/CDR3b Length Distribution by TRBV Gene (box Plot) in CMV-specific TCRs.png")
+plt.savefig("EBV image/CDR3b Length Distribution by TRBV Gene (box Plot) in EBV-specific TCRs.png")
 plt.show()
 
 
@@ -128,7 +128,7 @@ plt.xticks(rotation=45)
 plt.title("CDR3b Length Distribution by TRBV Gene (Violin Plot)")
 plt.ylabel("CDR3b Length")
 plt.xlabel("TRBV Gene")
-plt.savefig("CMV image/CDR3b Length Distribution by TRBV Gene (Violin Plot) in CMV-specific TCRs.png")
+plt.savefig("EBV image/CDR3b Length Distribution by TRBV Gene (Violin Plot) in EBV-specific TCRs.png")
 plt.show()
 
 
